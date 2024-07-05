@@ -78,7 +78,6 @@ publishing {
             artifactId = 'common-lib'
             version = '0.0.3-SNAPSHOT'
             from components.java
-
             pom {
                 name = 'Common Library'
                 description = 'common-library for twiter'
