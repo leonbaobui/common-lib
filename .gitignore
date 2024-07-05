@@ -1,0 +1,9 @@
+.gradle/
+lib/build/
+build/
+.idea
+.vscode
+./frontend/.vscode
+**/*.log
+/META-INF
+Dockerfile
