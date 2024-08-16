@@ -1,6 +1,7 @@
 package main.java.com.leon.baobui.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +10,10 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
+@ConditionalOnProperty(
+        name = "infrastructure.services.api.rest-template.enabled",
+        havingValue = "true"
+)
 public class MvcConfiguration implements WebMvcConfigurer {
 
     @Value("${hostname:http://localhost:3000}")
